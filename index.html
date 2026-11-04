@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#56bfd6">
+  <meta name="description" content="Explora el menú de Mariscos Jerry en Ixtapa y prepara tu pedido por WhatsApp.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="images/jerry-icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Mariscos Jerry | Menú en Ixtapa</title>
+</head>
+<body>
+  <header class="topbar">
+    <a class="wordmark" href="#inicio" aria-label="Mariscos Jerry, inicio">
+      <span class="wordmark-symbol" aria-hidden="true">J</span>
+      <span>MARISCOS <b>JERRY</b></span>
+    </a>
+    <nav class="desktop-nav" aria-label="Navegación principal">
+      <a href="#menu">Menú</a><a href="#ubicacion">Ubicación</a>
+    </nav>
+    <button class="cart-button" id="open-cart" type="button" aria-label="Abrir pedido">
+      <span>Mi pedido</span><b id="cart-count">0</b>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> MARISCOS · IXTAPA</p>
+        <h1>El antojo<br><em>viene del mar.</em></h1>
+        <p class="hero-description">Ceviches, aguachiles, camarones y más. Explora el menú y arma tu pedido a tu gusto.</p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#menu">VER MENÚ <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="#ubicacion">DATOS DEL NEGOCIO <span aria-hidden="true">↘</span></a>
+        </div>
+        <div class="hero-meta"><span>Ixtapa, Jalisco</span><i></i><span>Mariscos y cocina del mar</span></div>
+      </div>
+      <div class="hero-art" aria-label="Platillos de Mariscos Jerry">
+        <div class="hero-photo-window"><img class="hero-main-photo" src="images/platillos/platillo-02.jpg" alt="Platillo de mariscos servido en Mariscos Jerry" fetchpriority="high"></div>
+        <div class="hero-sticker"><span>FRESCO</span><b>Y A TU GUSTO</b></div>
+        <div class="hero-float-card hero-float-one"><img src="images/platillos/platillo-04.jpg" alt="Molcajete de mariscos"><span>ESPECIALIDAD</span></div>
+        <div class="hero-float-card hero-float-two"><img src="images/platillos/platillo-03.jpg" alt="Mariscos con salsa"><span>MUCHO SABOR</span></div>
+        <div class="hero-photo-sign"><span>COCINA DEL MAR</span><b>Mariscos Jerry</b></div>
+      </div>
+    </section>
+
+    <section class="menu-intro" id="menu">
+      <div class="section-shell menu-intro-row">
+        <div><p class="eyebrow"><span></span> PREPARADO AL MOMENTO</p><h2>Elige lo que<br><em>se te antoja.</em></h2></div>
+        <p>Encuentra tus favoritos, agrégalos al pedido y mándanos tu selección para confirmar disponibilidad.</p>
+      </div>
+    </section>
+
+    <div class="category-wrap"><nav class="category-nav" id="category-nav" aria-label="Categorías del menú"></nav></div>
+    <div id="menu-sections" class="menu-sections section-shell"></div>
+
+    <section class="menu-photo-section section-shell">
+      <div class="menu-photo-copy"><p class="eyebrow"><span></span> LA CARTA</p><h2>Todo el sabor<br><em>de Jerry.</em></h2><p>Consulta también las imágenes del menú compartidas por el negocio.</p></div>
+      <div class="menu-photo-stack">
+        <a href="images/menu-mariscos.png" target="_blank" rel="noopener"><img src="images/menu-mariscos.png" alt="Imagen del menú de Mariscos Jerry: tostadas, ceviches, aguachiles, ensaladas y bebidas" loading="lazy"></a>
+        <a href="images/menu-platillos.png" target="_blank" rel="noopener"><img src="images/menu-platillos.png" alt="Imagen del menú de Mariscos Jerry: burritas, camarones, tacos y costillas" loading="lazy"></a>
+      </div>
+    </section>
+
+    <section class="location-band" id="ubicacion">
+      <div class="section-shell location-inner">
+        <div><p class="eyebrow"><span></span> EN IXTAPA</p><h2>Te esperamos<br><em>en Jerry.</em></h2></div>
+        <div class="location-details">
+          <p class="location-name">MARISCOS JERRY</p>
+          <p>Ixtapa, Jalisco, México<br>Dirección y datos de contacto por confirmar.</p>
+          <div class="location-actions">
+            <span class="button button-light">UBICACIÓN POR CONFIRMAR</span>
+            <span class="button button-outline-light">CONTACTO POR CONFIRMAR</span>
+          </div>
+          <p class="contact-number">Muestra de catálogo · pedidos aún no habilitados</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="wordmark" href="#inicio"><span class="wordmark-symbol" aria-hidden="true">J</span><span>MARISCOS <b>JERRY</b></span></a><span>Carretera a Las Palmas · Ixtapa</span><a href="#inicio">VOLVER ARRIBA ↑</a></footer>
+
+  <div class="mobile-order-bar"><button class="button button-dark" id="open-cart-mobile" type="button">VER MI PEDIDO <span id="mobile-cart-count">0</span></button></div>
+  <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-title">
+    <div class="order-head">
+      <div><p class="order-kicker">MARISCOS JERRY</p><h2 id="order-title"><span aria-hidden="true">🛒</span> Tu pedido</h2></div>
+      <form method="dialog" class="dialog-close-form"><button class="close-dialog" aria-label="Cerrar" value="close">×</button></form>
+    </div>
+    <div id="cart-lines" class="cart-lines"></div>
+    <div class="cart-total"><span>Total estimado</span><strong id="cart-total">$0</strong></div>
+    <button class="order-continue" id="continue-order" type="button">CONTINUAR CON EL PEDIDO <span aria-hidden="true">↓</span></button>
+    <form id="order-form" class="order-form">
+      <fieldset class="delivery-fieldset">
+        <legend>¿Cómo quieres recibir tu pedido?</legend>
+        <div class="delivery-options">
+          <button type="button" class="delivery-option" data-fulfillment="A domicilio (consulta cobertura)"><span aria-hidden="true">⌂</span>Domicilio</button>
+          <button type="button" class="delivery-option" data-fulfillment="Comer en el restaurante"><span aria-hidden="true">▣</span>Restaurante</button>
+          <button type="button" class="delivery-option" data-fulfillment="Para recoger"><span aria-hidden="true">▤</span>Para llevar</button>
+        </div>
+        <input type="hidden" name="fulfillment" id="fulfillment" required>
+      </fieldset>
+      <div class="form-grid">
+        <label>Nombre<input name="name" autocomplete="name" placeholder="Tu nombre" required></label>
+        <label>Teléfono<input name="phone" type="tel" autocomplete="tel" placeholder="Tu teléfono" required></label>
+      </div>
+      <label id="address-field" class="address-field" hidden>Dirección de entrega<input name="address" autocomplete="street-address" placeholder="Escribe tu dirección"></label>
+      <label>Forma de pago
+        <select name="payment" required>
+          <option value="">Selecciona una opción</option>
+          <option>Efectivo</option>
+          <option>Transferencia</option>
+          <option>Tarjeta al recibir (por confirmar)</option>
+        </select>
+      </label>
+      <label>Observaciones<textarea name="notes" rows="3" placeholder="Salsas, términos o algo más que debamos saber..."></textarea></label>
+      <button class="button button-dark send-order" type="submit">VER MENSAJE DE MUESTRA <span aria-hidden="true">↗</span></button>
+      <p class="order-disclaimer">Esta es una demostración. Los datos de contacto y el envío de pedidos se habilitarán cuando el negocio apruebe el catálogo.</p>
+    </form>
+    <pre class="order-preview" id="order-preview" hidden></pre>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="js/app.js" defer></script>
+</body>
+</html>

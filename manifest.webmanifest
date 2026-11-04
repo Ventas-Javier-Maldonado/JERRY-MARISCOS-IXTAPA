@@ -1,0 +1,11 @@
+{
+  "name": "Mariscos Jerry | Menú en Ixtapa",
+  "short_name": "Jerry",
+  "description": "Consulta el menú de Mariscos Jerry y arma tu pedido.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f8fafb",
+  "theme_color": "#58bfd7",
+  "icons": [{ "src": "images/jerry-icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}
