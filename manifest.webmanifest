@@ -7,5 +7,9 @@
   "display": "standalone",
   "background_color": "#f8fafb",
   "theme_color": "#58bfd7",
-  "icons": [{ "src": "images/jerry-icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+  "icons": [
+    { "src": "images/jerry-icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "images/jerry-icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "images/jerry-icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
 }
